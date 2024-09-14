@@ -1,0 +1,14 @@
+name: Test
+
+on: [push, workflow_dispatch]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          echo ${{ github.workspace }}
+          echo $GITHUB_WORKSPACE
+          echo $HOME
+          echo $PWD
